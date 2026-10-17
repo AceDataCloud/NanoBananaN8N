@@ -1,12 +1,12 @@
 ![Nano Banana for n8n](https://raw.githubusercontent.com/AceDataCloud/NanoBananaN8N/main/assets/banner.png)
 
-# Nano Banana by AceDataCloud — n8n community node
+# Nano Banana by Ace Data Cloud — n8n community node
 
 Generate and edit Nano Banana images, control composition and resolution, and track tasks in n8n with AceDataCloud.
 
 [![npm](https://img.shields.io/npm/v/@acedatacloud/n8n-nodes-nano-banana)](https://www.npmjs.com/package/@acedatacloud/n8n-nodes-nano-banana) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**Package:** `@acedatacloud/n8n-nodes-nano-banana` · **License:** MIT · **Node:** Nano Banana by AceDataCloud
+**Package:** `@acedatacloud/n8n-nodes-nano-banana` · **License:** MIT · **Node:** Nano Banana by Ace Data Cloud
 
 Maintained by **Ace Data Cloud**, connecting to **AceDataCloud's API**. This is not an official package from the model developer. A direct provider subscription does not supply an AceDataCloud API credential.
 
@@ -31,6 +31,24 @@ See [n8n's installation guide](https://docs.n8n.io/integrations/community-nodes/
 | Task | Get | Retrieve one task's state, result, error and reported cost |
 | Task | Get Many | Retrieve up to 50 explicit task IDs as separate n8n items |
 
+## Use the node
+
+Search for **Nano Banana** after installation. Choose **Nano Banana by Ace Data Cloud**; the integration is maintained by Ace Data Cloud, not the model developer. Related search phrases are `nano banana`, `nanobanana`, `nano-banana`. These are discovery hints, not a claim about search rank or official approval.
+
+- **Self-hosted n8n:** follow [the official community-node installation instructions](https://docs.n8n.io/integrations/community-nodes/installation-and-management/gui-installation/) and install `@acedatacloud/n8n-nodes-nano-banana`. After installation, add a Manual Trigger (or use your existing trigger), then use its next **+** to find the node. This is a processing/query node, not a trigger.
+- **n8n Cloud:** use [the verified-node picker](https://docs.n8n.io/integrations/community-nodes/installation-and-management/install-verified-community-nodes/) only when this package is officially available there. Do not paste an unverified package name into Cloud or treat npm publication as verification.
+- Create **Nano Banana by Ace Data Cloud API** in n8n credentials, then paste your raw application API token into **API Token**. See [Credentials](#credentials) for account registration, General application initialization and optional expiry/access/usage limits.
+
+### Read an existing task first
+
+1. Add this node after a trigger and choose **Resource → Task**, **Operation → Get**. Select the credential for this service.
+2. Paste an existing task ID returned by this same service. The **Task ID** field is not a prompt or a video/image URL. Leave creation and n8n retry-on-fail off.
+3. Execute that query node once. Continue only when `finished` and `successful` are true; inspect `data` for the final media URL. A pending response or task ID is not the final output. Record 401/403 and check access rather than creating a replacement task.
+
+For new creation, choose **Resource → Image**, **Operation → Generate**, then explicitly select the model and inputs. Check [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=nanobananan8n_readme_pricing) and balance before executing once. Keep the returned ID and query it after a timeout; restarting creation can incur another charge. Each incoming item can create a separate task. No model fallback is added by this integration.
+
+The API-key screenshots below are real platform references; this README does not claim that they show an n8n installation or output. Native n8n installation/configuration screenshots must identify the actual package/version and contain no secret. All customer-facing node text and documentation remain English to match [n8n verification requirements](https://docs.n8n.io/connect/create-nodes/build-your-node/reference/verification-guidelines/).
+
 ## Credentials
 
 1. Open [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=nanobananan8n_readme_api_key). Sign in, or register an account first.
@@ -45,7 +63,7 @@ See [n8n's installation guide](https://docs.n8n.io/integrations/community-nodes/
 
 Save the key in the client's credential store or the environment variable shown below. Never put it in a prompt, shared workflow, screenshot, or Git commit. If authentication fails, check the full copied value, application/service access, expiration, usage limit, and balance before creating another key.
 
-In n8n, open a node and create a **Nano Banana by AceDataCloud API** credential. Paste the raw value into **API Token**, save, and select this credential on every node that needs it, including task readers.
+In n8n, open a node and create a **Nano Banana by Ace Data Cloud API** credential. Paste the raw value into **API Token**, save, and select this credential on every node that needs it, including task readers.
 
 The token is masked and stored in n8n's credential store. The node sends Bearer authentication only to `https://api.acedata.cloud`. Its credential test queries an empty task batch and does not generate media. Do not use a platform management token.
 
@@ -94,7 +112,7 @@ HTTP/authentication/parameter errors fail the node with the API's error context.
 
 Only configured text, model choices, media references and query parameters are sent to AceDataCloud. Input URLs must be accessible to the API. The node has no filesystem access, environment-variable access or telemetry, and no runtime dependencies beyond n8n's workflow API.
 
-Built with the official `@n8n/node-cli`, strict community-package rules and Node.js 24. CI loads the package in n8n **2.42.3**. Older n8n versions are not part of this release's compatibility test matrix. Icons are bundled from the existing Studio/service catalog; see [asset provenance](assets/README.md).
+Built with the official `@n8n/node-cli`, strict community-package rules and Node.js 24. CI loads the package in current stable n8n **2.43.7**. Older n8n versions are not part of this release's compatibility test matrix. Icons are bundled from the existing Studio/service catalog; see [asset provenance](assets/README.md).
 
 ## Development
 

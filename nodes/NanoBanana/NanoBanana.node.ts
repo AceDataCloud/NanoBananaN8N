@@ -20,19 +20,35 @@ import { properties } from "./properties";
 import { buildRequest } from "./request";
 export class NanoBanana implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "Nano Banana by AceDataCloud",
+    displayName: "Nano Banana by Ace Data Cloud",
     name: "nanoBanana",
     icon: { light: "file:icon.png", dark: "file:icon.dark.png" },
     group: ["transform"],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description:
-      "Generate and edit Nano Banana images, control composition and resolution, and track tasks in workflows.",
-    defaults: { name: "Nano Banana by AceDataCloud" },
+      "Generate and edit Nano Banana images and retrieve the same task through Ace Data Cloud",
+    defaults: { name: "Nano Banana by Ace Data Cloud" },
     inputs: [NodeConnectionTypes.Main],
     outputs: [NodeConnectionTypes.Main],
     usableAsTool: true,
     credentials: [{ name: "aceDataNanoBananaApi", required: true }],
+    codex: {
+      alias: ["nano banana", "nanobanana", "nano-banana"],
+      categories: ["Marketing & Content"],
+      resources: {
+        primaryDocumentation: [
+          {
+            url: "https://github.com/AceDataCloud/NanoBananaN8N#use-the-node",
+          },
+        ],
+        credentialDocumentation: [
+          {
+            url: "https://github.com/AceDataCloud/NanoBananaN8N#credentials",
+          },
+        ],
+      },
+    },
     properties,
   };
   async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
