@@ -7,7 +7,7 @@ import type {
 
 export class AceDataNanoBananaApi implements ICredentialType {
   name = "aceDataNanoBananaApi";
-  displayName = "Nano Banana by AceDataCloud API";
+  displayName = "Nano Banana by Ace Data Cloud API";
   documentationUrl =
     "https://github.com/AceDataCloud/NanoBananaN8N#credentials";
   icon = "file:../nodes/NanoBanana/icon.png" as const;
@@ -20,6 +20,13 @@ export class AceDataNanoBananaApi implements ICredentialType {
       default: "",
       required: true,
       description: "Your AceDataCloud application API token",
+    },
+    {
+      displayName:
+        'Create or copy an application API key in <a href="https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=nanobananan8n_credential_api_key" target="_blank">Ace Data Cloud Applications</a>. Paste only the token into API Token; do not add Bearer.',
+      name: "keySetup",
+      type: "notice",
+      default: "",
     },
   ];
   authenticate: IAuthenticateGeneric = {

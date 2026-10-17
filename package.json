@@ -1,7 +1,7 @@
 {
   "name": "@acedatacloud/n8n-nodes-nano-banana",
   "version": "0.1.1",
-  "description": "Generate and edit Nano Banana images, control composition and resolution, and track tasks in n8n with AceDataCloud.",
+  "description": "Generate and edit Nano Banana images and retrieve the same task through Ace Data Cloud.",
   "license": "MIT",
   "homepage": "https://github.com/AceDataCloud/NanoBananaN8N",
   "keywords": [
@@ -10,7 +10,10 @@
     "nano-banana",
     "gemini",
     "image-generation",
-    "image-editing"
+    "image-editing",
+    "image",
+    "acedata",
+    "ace-data-cloud"
   ],
   "author": {
     "name": "Ace Data Cloud",
