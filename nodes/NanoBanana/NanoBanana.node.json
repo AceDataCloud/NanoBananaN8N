@@ -6,7 +6,7 @@
   "resources": {
     "primaryDocumentation": [
       {
-        "url": "https://github.com/AceDataCloud/NanoBananaN8N#readme"
+        "url": "https://github.com/AceDataCloud/NanoBananaN8N#use-the-node"
       }
     ],
     "credentialDocumentation": [
@@ -14,5 +14,6 @@
         "url": "https://github.com/AceDataCloud/NanoBananaN8N#credentials"
       }
     ]
-  }
+  },
+  "alias": ["nano banana", "nanobanana", "nano-banana"]
 }
