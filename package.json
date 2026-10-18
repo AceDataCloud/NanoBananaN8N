@@ -1,6 +1,6 @@
 {
   "name": "@acedatacloud/n8n-nodes-nano-banana",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Generate and edit Nano Banana images and retrieve the same task through Ace Data Cloud.",
   "license": "MIT",
   "homepage": "https://github.com/AceDataCloud/NanoBananaN8N",
