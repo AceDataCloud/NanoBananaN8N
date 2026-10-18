@@ -139,3 +139,7 @@ Releases are built from merged source through GitHub Actions with `npm publish -
 - [n8n community-node documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 Include the package version, n8n version, operation and a redacted error when reporting issues. Never include API tokens or private media.
+
+## Reproduce the package installation check
+
+Run `pnpm run build && bash scripts/smoke-docker.sh` with Docker available. The script creates `npm pack`, installs that exact tarball in isolated n8n 2.43.7, checks bundled native metadata, help links, icons and masked credential fields, imports the credential-free smoke workflow, and confirms execution stops before any API call. The archive manifest and loading log are saved in `artifacts/`. This checks real host package installation/loading and missing-credential behavior; it does not prove ordinary UI search, an authorized service response, a terminal media task, billing or acquisition.
