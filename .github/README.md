@@ -2,13 +2,13 @@
 
 ![Nano Banana for n8n](https://raw.githubusercontent.com/AceDataCloud/NanoBananaN8N/main/assets/banner.png)
 
-# Nano Banana by Ace Data Cloud — n8n community node
+# Nano Banana — n8n community node
 
 Generate and edit Nano Banana images, control composition and resolution, and track tasks in n8n with AceDataCloud.
 
 [![npm](https://img.shields.io/npm/v/@acedatacloud/n8n-nodes-nano-banana)](https://www.npmjs.com/package/@acedatacloud/n8n-nodes-nano-banana) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../LICENSE)
 
-**Package:** `@acedatacloud/n8n-nodes-nano-banana` · **License:** MIT · **Node:** Nano Banana by Ace Data Cloud
+**Package:** `@acedatacloud/n8n-nodes-nano-banana` · **License:** MIT · **Node:** Nano Banana
 
 Maintained by **Ace Data Cloud**, connecting to **AceDataCloud's API**. This is not an official package from the model developer. A direct provider subscription does not supply an AceDataCloud API credential.
 
@@ -35,11 +35,11 @@ See [n8n's installation guide](https://docs.n8n.io/integrations/community-nodes/
 
 ## Use the node
 
-Search for **Nano Banana** after installation. Choose **Nano Banana by Ace Data Cloud**; the integration is maintained by Ace Data Cloud, not the model developer. Related search phrases are `nano banana`, `nanobanana`, `nano-banana`. These are discovery hints, not a claim about search rank or official approval.
+Search for **Nano Banana** after installation. Choose **Nano Banana**; the integration is maintained by Ace Data Cloud, not the model developer. Related search phrases are `nano banana`, `nanobanana`, `nano-banana`. These are discovery hints, not a claim about search rank or official approval.
 
 - **Self-hosted n8n:** follow [the official community-node installation instructions](https://docs.n8n.io/integrations/community-nodes/installation-and-management/gui-installation/) and install `@acedatacloud/n8n-nodes-nano-banana`. After installation, add a Manual Trigger (or use your existing trigger), then use its next **+** to find the node. This is a processing/query node, not a trigger.
 - **n8n Cloud:** use [the verified-node picker](https://docs.n8n.io/integrations/community-nodes/installation-and-management/install-verified-community-nodes/) only when this package is officially available there. Do not paste an unverified package name into Cloud or treat npm publication as verification.
-- Create **Nano Banana by Ace Data Cloud API** in n8n credentials, then paste your raw application API token into **API Token**. See [Credentials](#credentials) for account registration, General application initialization and optional expiry/access/usage limits.
+- Create **Nano Banana API** in n8n credentials, then paste your raw application API token into **API Token**. See [Credentials](#credentials) for account registration, General application initialization and optional expiry/access/usage limits.
 
 ![Official n8n reference: add an action after a trigger](https://raw.githubusercontent.com/n8n-io/n8n-docs/4a84a4229f694c8565dcd0a9cd0af37623fa2cbc/docs/get-started/.gitbook/assets/build-your-first-workflow-get-weather-01.png)
 
@@ -69,7 +69,7 @@ The API-key screenshots below are real platform references; this README does not
 
 Save the key in the client's credential store or the environment variable shown below. Never put it in a prompt, shared workflow, screenshot, or Git commit. If authentication fails, check the full copied value, application/service access, expiration, usage limit, and balance before creating another key.
 
-In n8n, open a node and create a **Nano Banana by Ace Data Cloud API** credential. Paste the raw value into **API Token**, save, and select this credential on every node that needs it, including task readers.
+In n8n, open a node and create a **Nano Banana API** credential. Paste the raw value into **API Token**, save, and select this credential on every node that needs it, including task readers.
 
 The token is masked and stored in n8n's credential store. The node sends Bearer authentication only to `https://api.acedata.cloud`. Its credential test queries an empty task batch and does not generate media. Do not use a platform management token.
 

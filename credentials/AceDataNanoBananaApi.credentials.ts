@@ -7,7 +7,7 @@ import type {
 
 export class AceDataNanoBananaApi implements ICredentialType {
   name = "aceDataNanoBananaApi";
-  displayName = "Nano Banana by Ace Data Cloud API";
+  displayName = "Nano Banana API";
   documentationUrl =
     "https://github.com/AceDataCloud/NanoBananaN8N#credentials";
   icon = "file:../nodes/NanoBanana/icon.png" as const;
